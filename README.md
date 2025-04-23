@@ -1,0 +1,1 @@
+Es un codigo sobre un Sistema de registro de Citas de una veterinaria realizado en Java, cuenta con 4 clases los cuales seria el Hisotrial medico, Mascota; Propietario, Veterinario en la cual el codigo actualmente solo cuenta con el registro de propietario y mascota el cual solamente faltaria el hacer el registro de las demas clases el codigo cuenta tambien con arraylist
