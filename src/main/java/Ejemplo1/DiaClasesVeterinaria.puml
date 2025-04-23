@@ -1,0 +1,53 @@
+@startuml
+class Mascota{
+    - mascota: int
+    - nombre: String
+    - especie: String
+    - raza: String
+    - edad: int
+    - sexo: String
+    - peso: double
+}
+
+class Propietario{
+    - nombre: String
+    - telefono: int
+    - email: String
+    - direccion: String
+}
+
+class cita{
+    - fecha: int
+    - hora: int
+    - motivo: String
+    - estado: String
+}
+
+class Veterinario{
+    - nombre: String
+    - especialidad: String
+    - telefono: int
+    - email: String
+    - horariodispo: int
+}
+
+class HistorialMedico {
+    - fechaconsulta: int
+    - diagnostico: String
+    - tratamiento: String
+    - veterinario: String
+}
+
+Propietario "1" -- "0..n" Mascota: pertenece a <
+Propietario -- Mascota: es propietario >
+
+Mascota "0..n" -- "0..n" cita: utiliza <
+Mascota -- cita: tiene una >
+
+HistorialMedico "0..n" -- "0..n" Mascota: tiene un <
+HistorialMedico -- Mascota: pertenece >
+
+Veterinario "0..n" -- "=..n" cita: tiene un <
+Veterinario -- cita: utiliza >
+
+@enduml
